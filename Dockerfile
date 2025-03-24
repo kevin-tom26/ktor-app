@@ -9,7 +9,7 @@ COPY . .
 RUN gradle clean shadowJar --no-daemon
 
 # Stage 2: Create the runtime container
-FROM amazoncorretto:17
+FROM amazoncorretto:21
 WORKDIR /app
 
 # Copy the built JAR from the previous stage
